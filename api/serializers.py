@@ -2,10 +2,10 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from books . models import Book
 
-class BookListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Book
-        fields = ("title", "author",)
+#class BookListSerializer(serializers.ModelSerializer):
+ #   class Meta:
+  #      model = Book
+   #     fields = ("title", "author",)
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
