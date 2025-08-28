@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Thrid-party apps
     "rest_framework",
+    "drf_spectacular",
 
     # Local apps
     "books",
@@ -132,4 +133,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 3
+}
+
+# Dr_spectacular
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Book API',
+    'DESCRIPTION': 'Kind all your book up to date',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
 }
